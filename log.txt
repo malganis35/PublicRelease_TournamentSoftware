@@ -35,17 +35,19 @@ This is SORT BY
 - Initialize functions (@cellSelect) to Tables
 - Display Logo on the Software
 - Delete all files in /export
+Edit Tournament Info
+Before editing a tournament, you have a create one first !
 Creating a new tournament
+No caseInsensitiveOption. Putting by default to true
+No caseInsensitiveOption. Putting by default to true
+No caseInsensitiveOption. Putting by default to true
+No caseInsensitiveOption. Putting by default to true
 No caseInsensitiveOption. Putting by default to true
 No caseInsensitiveOption. Putting by default to true
 No caseInsensitiveOption. Putting by default to true
 No caseInsensitiveOption. Putting by default to true
 - Create Tournament database
 No caseInsensitiveOption. Putting by default to true
-This is SORT BY
-This is SORT BY
-This is SORT BY
-This is SORT BY
 This is SORT BY
 This is SORT BY
 This is SORT BY
@@ -72,6 +74,16 @@ Start the Tournament Core
 - This a number. Continue ...
 - Get IP and Mac Adress
 - Get IP Adress
+Warning: No internet connection !
+> In getIPandMAC (line 12)
+  In beginTournament>beginTournament_OpeningFcn (line 85)
+  In gui_mainfcn (line 220)
+  In beginTournament (line 42)
+  In BushiSoftGUI>MENU_beginTournament_Callback (line 495)
+  In BushiSoftGUI>BUT_beginTournament_Callback (line 302)
+  In gui_mainfcn (line 95)
+  In BushiSoftGUI (line 42)
+  In matlab.graphics.internal.figfile.FigFile/read>@(hObject,eventdata)BushiSoftGUI('BUT_beginTournament_Callback',hObject,eventdata,guidata(hObject))
 - Get Mac Adress of the Machine
 - Look if we start from a save file or a new tournament
 -- This is a new tournament. Set boolean to 1 and typeRound = Round
@@ -106,20 +118,6 @@ No BYE Player detected.
 - Refresh the table of pairing
 CHECK_showPendingResult_Callback added in the future
 - Show all results (Tables)
-Display Informations about the match
-- All scores has not been added
-- Extract informations about the players
-- Assign score : 1-0, 0-0, or 0-1 according to the radio button
--- Checking if there is a **BYE** Player
--- There is no **BYE** player
--- Checking the state of the button radio : pending, win Player1, win Player 2, draw
--- The score is: 1-0
-- Store the match in the record of the rounds (TABLE.historyMatch_tmp)
-- Display the match (if only pending result or all results)
-CHECK_showPendingResult_Callback added in the future
-- Show all results (Tables)
-Display Informations about the match
-Display Informations about the match
 Display Informations about the match
 - All scores has not been added
 - Extract informations about the players
@@ -196,7 +194,6 @@ Save the actual Table of tournament for replay
 --- Player is already paired. Continue
 --- Player is already paired. Continue
 --- Player is already paired. Continue
---- Player is already paired. Continue
 - Allocate TABLE.historyMatch_tmp
 - Display the pairing table in the GUI
 -- Display the table
@@ -211,20 +208,6 @@ No BYE Player detected.
 - Refresh the table of pairing
 CHECK_showPendingResult_Callback added in the future
 - Show all results (Tables)
-Display Informations about the match
-- All scores has not been added
-- Extract informations about the players
-- Assign score : 1-0, 0-0, or 0-1 according to the radio button
--- Checking if there is a **BYE** Player
--- There is no **BYE** player
--- Checking the state of the button radio : pending, win Player1, win Player 2, draw
--- The score is: 1-0
-- Store the match in the record of the rounds (TABLE.historyMatch_tmp)
-- Display the match (if only pending result or all results)
-CHECK_showPendingResult_Callback added in the future
-- Show all results (Tables)
-Display Informations about the match
-Display Informations about the match
 Display Informations about the match
 - All scores has not been added
 - Extract informations about the players
@@ -289,6 +272,230 @@ Warning: The assignment added rows to the table, but did not assign values to al
   In gui_mainfcn (line 95)
   In beginTournament (line 42)
   In matlab.graphics.internal.figfile.FigFile/read>@(hObject,eventdata)beginTournament('RADIO_player1_Callback',hObject,eventdata,guidata(hObject))
+--------------------------------------------------------------------
+Start the function to pair players
+Save the actual Table of tournament for replay
+- Incremente number of rounds
+- Visibility ON
+- Reset option.tmp.compteur_computeScore to 0
+- Create Pairing for Round no.3
+-- Creating pairing for other rounds (not 1st round)
+-- swissRoundType : Monrad
+--- Player is already paired. Continue
+--- le match a déjà eu lieu. Continue
+--- Player is already paired. Continue
+--- Player is already paired. Continue
+- Allocate TABLE.historyMatch_tmp
+- Display the pairing table in the GUI
+-- Display the table
+-- Update the list of players
+-- Create matrice match_record to store results
+--------------------------------------------------------------------
+Display the chosen table
+Display the match Informations
+- Assign win to player against BYE
+No caseInsensitiveOption. Putting by default to true
+No BYE Player detected.
+- Refresh the table of pairing
+CHECK_showPendingResult_Callback added in the future
+- Show all results (Tables)
+Display Informations about the match
+- All scores has not been added
+- Extract informations about the players
+- Assign score : 1-0, 0-0, or 0-1 according to the radio button
+-- Checking if there is a **BYE** Player
+-- There is no **BYE** player
+-- Checking the state of the button radio : pending, win Player1, win Player 2, draw
+-- The score is: 1-0
+- Store the match in the record of the rounds (TABLE.historyMatch_tmp)
+- Display the match (if only pending result or all results)
+CHECK_showPendingResult_Callback added in the future
+- Show all results (Tables)
+Display Informations about the match
+Display Informations about the match
+- All scores has not been added
+- Extract informations about the players
+- Assign score : 1-0, 0-0, or 0-1 according to the radio button
+-- Checking if there is a **BYE** Player
+-- There is no **BYE** player
+-- Checking the state of the button radio : pending, win Player1, win Player 2, draw
+-- The score is: 1-0
+- Store the match in the record of the rounds (TABLE.historyMatch_tmp)
+- Display the match (if only pending result or all results)
+CHECK_showPendingResult_Callback added in the future
+- Show all results (Tables)
+Display Informations about the match
+Display Informations about the match
+- All scores has not been added
+- Extract informations about the players
+- Assign score : 1-0, 0-0, or 0-1 according to the radio button
+-- Checking if there is a **BYE** Player
+-- There is no **BYE** player
+-- Checking the state of the button radio : pending, win Player1, win Player 2, draw
+-- The score is: 1-0
+- Store the match in the record of the rounds (TABLE.historyMatch_tmp)
+- Display the match (if only pending result or all results)
+CHECK_showPendingResult_Callback added in the future
+- Show all results (Tables)
+-- Update TABLE.historyMatch
+--- 1st time to compute score: Store directly the TABLE.historyMatch_tmp to TABLE.historyMatch
+-- Assign Scores
+-- Sort the data : 1st time
+-- Determine if 1st Loss and store it
+-- Compute Solkoff or Buchholz points
+-- Store cumulative score
+-- Compute Bushi Points
+Computing Bushiroad System Points : MWP, Opp_MW, Opp_T1
+No caseInsensitiveOption. Putting by default to true
+-- Making the ranking
+- All the matches have been reported. You can see the new standings
+Display Informations about the match
+-- Sort the data : 2nd time
+-- Assign ranking
+No start_no_ranking putted. Default: 1
+-- Save in HistoryTABLE
+Warning: The assignment added rows to the table, but did not assign values to all of the table's existing variables. Those variables have been extended with rows containing default values.
+> In table/subsasgnDot (line 285)
+  In table/subsasgn (line 67)
+  In beginTournament>computeScore (line 1124)
+  In beginTournament>BUT_saveScore_Callback (line 595)
+  In beginTournament>RADIO_player1_Callback (line 853)
+  In gui_mainfcn (line 95)
+  In beginTournament (line 42)
+  In matlab.graphics.internal.figfile.FigFile/read>@(hObject,eventdata)beginTournament('RADIO_player1_Callback',hObject,eventdata,guidata(hObject))
+--------------------------------------------------------------------
+Start the function to pair players
+Save the actual Table of tournament for replay
+- Incremente number of rounds
+- Visibility ON
+- Reset option.tmp.compteur_computeScore to 0
+- Create Pairing for Round no.4
+-- Creating pairing for other rounds (not 1st round)
+-- swissRoundType : Monrad
+--- le match a déjà eu lieu. Continue
+--- Player is already paired. Continue
+--- Player is already paired. Continue
+--- Player is already paired. Continue
+- Allocate TABLE.historyMatch_tmp
+- Display the pairing table in the GUI
+-- Display the table
+-- Update the list of players
+-- Create matrice match_record to store results
+--------------------------------------------------------------------
+Display the chosen table
+Display the match Informations
+- Assign win to player against BYE
+No caseInsensitiveOption. Putting by default to true
+No BYE Player detected.
+- Refresh the table of pairing
+CHECK_showPendingResult_Callback added in the future
+- Show all results (Tables)
+Display Informations about the match
+- All scores has not been added
+- Extract informations about the players
+- Assign score : 1-0, 0-0, or 0-1 according to the radio button
+-- Checking if there is a **BYE** Player
+-- There is no **BYE** player
+-- Checking the state of the button radio : pending, win Player1, win Player 2, draw
+-- The score is: 1-0
+- Store the match in the record of the rounds (TABLE.historyMatch_tmp)
+- Display the match (if only pending result or all results)
+CHECK_showPendingResult_Callback added in the future
+- Show all results (Tables)
+Display Informations about the match
+Display Informations about the match
+- All scores has not been added
+- Extract informations about the players
+- Assign score : 1-0, 0-0, or 0-1 according to the radio button
+-- Checking if there is a **BYE** Player
+-- There is no **BYE** player
+-- Checking the state of the button radio : pending, win Player1, win Player 2, draw
+-- The score is: 1-0
+- Store the match in the record of the rounds (TABLE.historyMatch_tmp)
+- Display the match (if only pending result or all results)
+CHECK_showPendingResult_Callback added in the future
+- Show all results (Tables)
+Display Informations about the match
+Display Informations about the match
+- All scores has not been added
+- Extract informations about the players
+- Assign score : 1-0, 0-0, or 0-1 according to the radio button
+-- Checking if there is a **BYE** Player
+-- There is no **BYE** player
+-- Checking the state of the button radio : pending, win Player1, win Player 2, draw
+-- The score is: 1-0
+- Store the match in the record of the rounds (TABLE.historyMatch_tmp)
+- Display the match (if only pending result or all results)
+CHECK_showPendingResult_Callback added in the future
+- Show all results (Tables)
+-- Update TABLE.historyMatch
+--- 1st time to compute score: Store directly the TABLE.historyMatch_tmp to TABLE.historyMatch
+-- Assign Scores
+-- Sort the data : 1st time
+-- Determine if 1st Loss and store it
+-- Compute Solkoff or Buchholz points
+-- Store cumulative score
+-- Compute Bushi Points
+Computing Bushiroad System Points : MWP, Opp_MW, Opp_T1
+No caseInsensitiveOption. Putting by default to true
+-- Making the ranking
+- All the matches have been reported. You can see the new standings
+Display Informations about the match
+-- Sort the data : 2nd time
+-- Assign ranking
+No start_no_ranking putted. Default: 1
+-- Save in HistoryTABLE
+Warning: The assignment added rows to the table, but did not assign values to all of the table's existing variables. Those variables have been extended with rows containing default values.
+> In table/subsasgnDot (line 285)
+  In table/subsasgn (line 67)
+  In beginTournament>computeScore (line 1124)
+  In beginTournament>BUT_saveScore_Callback (line 595)
+  In beginTournament>RADIO_player1_Callback (line 853)
+  In gui_mainfcn (line 95)
+  In beginTournament (line 42)
+  In matlab.graphics.internal.figfile.FigFile/read>@(hObject,eventdata)beginTournament('RADIO_player1_Callback',hObject,eventdata,guidata(hObject))
+--------------------------------------------------------------------
+Display the Standing
+- Extract the Table of data with selected columns
+- Check if round is finished
+- Loop to put String into the listbox
+- Selecting Specific Round : 4
+- Selecting Specific Round : 3
+- Selecting Specific Round : 4
+- Selecting Specific Round : 3
+- Selecting Specific Round : 2
+- Selecting Specific Round : 1
+- Selecting Specific Round : 0
+Closing the other GUI of column to display
+--------------------------------------------------------------------
+Start the function to pair players
+Save the actual Table of tournament for replay
+- You have reached the maximum number of rounds. Go now to Top
+-- Create matrice match_record to store results
+--------------------------------------------------------------------
+Display the chosen table
+Display the match Informations
+- Assign win to player against BYE
+No caseInsensitiveOption. Putting by default to true
+No BYE Player detected.
+- Refresh the table of pairing
+CHECK_showPendingResult_Callback added in the future
+- Show all results (Tables)
+--------------------------------------------------------------------
+Display the Standing
+- Extract the Table of data with selected columns
+- Check if round is finished
+- Loop to put String into the listbox
+- Selecting Specific Round : 4
+- Selecting Specific Round : 3
+Closing the other GUI of column to display
+--------------------------------------------------------------------
+Display the Standing
+- Extract the Table of data with selected columns
+- Check if round is finished
+- Loop to put String into the listbox
+- Selecting Specific Round : 4
+Closing the other GUI of column to display
 Going to Top 4 (Semi-finals)
 --------------------------------------------------------------------
 Start the function to pair players
@@ -365,15 +572,6 @@ Display Informations about the match
 -- Assign ranking
 No start_no_ranking putted. Default: 1
 -- Save in HistoryTABLE
-Warning: The assignment added rows to the table, but did not assign values to all of the table's existing variables. Those variables have been extended with rows containing default values.
-> In table/subsasgnDot (line 285)
-  In table/subsasgn (line 67)
-  In beginTournament>computeScore (line 1124)
-  In beginTournament>BUT_saveScore_Callback (line 595)
-  In beginTournament>RADIO_player1_Callback (line 853)
-  In gui_mainfcn (line 95)
-  In beginTournament (line 42)
-  In matlab.graphics.internal.figfile.FigFile/read>@(hObject,eventdata)beginTournament('RADIO_player1_Callback',hObject,eventdata,guidata(hObject))
 --------------------------------------------------------------------
 Start the function to pair players
 - Reset option.tmp.compteur_computeScore to 0
@@ -461,30 +659,22 @@ Sending the report
 Export final Standings in .csv
 - Extract the date of now
 - Save the global variable TABLE MATRICE and option to a .mat file to send
+- Get IP Adress
+- Get Mac Adress of the Machine
 - Configure the mail adress to send :
-    '-- '    'pairing.software@gmail.com'
+Undefined function or variable 'MyExternalIP'.
 
--- 2017/02/06 Report of tournament (my_name):Tournament of 06/02/2017
--- Dear Admin,
-
-Here is the report
-Author: my_name
-Contact: my_adress@adress.com
-Location Information: Other ("No coutry") - 06/02/2017
-ID Location: 0
-
-IP Adress: 88.163.127.3
-MAC Address: 3C-77-E6-86-26-29
-
-Additionnal informations: 
-my additionnal information
+Error in beginTournament>MENU_sendReport_Callback (line 1327)
 
 
-Note: You can view the origin of the sender by clicking the following link: 
-http://www.infosniper.net/index.php?ip_address=88.163.127.3&map_source=1&overview_map=1&lang=1&map_type=1&zoom_level=7
--- File Attached
-    'C:\Users\CaoTri\A...'    'C:\Users\CaoTri\D...'    'C:\Users\CaoTri\D...'
+Error in gui_mainfcn (line 95)
 
-- Send with the Gmail adress pairing.software@gmail.com
-    'Report has been sent successfu...'    'pairing.software@gmail.com'
+
+Error in beginTournament (line 42)
+
+
+Error in matlab.graphics.internal.figfile.FigFile/read>@(hObject,eventdata)beginTournament('MENU_sendReport_Callback',hObject,eventdata,guidata(hObject))
+
+
+Error while evaluating Menu Callback
 
