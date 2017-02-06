@@ -1,0 +1,41 @@
+<Tournament Pairing Software>  Copyright (C) <2018>  <Cao Tri DO >
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+This is free software, and you are welcome to redistribute it
+under certain conditions; type `show c' for details.
+
+
+Author: Cao Tri DO (malganis35)
+Mail: caotri.do88@gmail.com
+
+
+This software is a new software for tournament pairing based on the Bushiroad software.
+It includes many of its functionalities and add new ones.
+
+This project was initiated by the WS France Table Ronde and in collaboration with WS Italia
+
+Don't hesitate to visit our website:
+www.ws-france.fr
+
+Log:
+V1.3
+- visibility in rounds
+- ask number of rounds
+- fix sort by
+- online help
+- edit tournament info
+- fix bug for even number of players
+
+V1.2
+- BYE is taken into account in the computation of the pairing
+- add licence
+- bug fixed
+
+
+V1.121
+- correct bugs
+- can used for odd number of players
+
+V1.1
+- add .exe executable to launch the program
+- need to be installed on the machine: Excel, Acrobat Reader, Matlab Runtime
+- can't be used for odd number of players for now
